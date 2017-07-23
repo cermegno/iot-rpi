@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
   
   config.vm.provision "shell", inline: <<-SHELL
     cp /vagrant/mosquitto.repo /etc/yum.repos.d/
-	sudo yum -y install mosquitto
+	yum -y install mosquitto
 	sudo service mosquitto start
 	sudo chkconfig mosquitto on
 	yum -y install mosquitto-clients
@@ -25,7 +25,7 @@ Vagrant.configure("2") do |config|
 	sudo chkconfig redis on
 	pip install flask
 	pip install redis
-	sudo yum -y nano
+	yum -y install nano
 	echo "include /usr/share/nano/python.nanorc" > .nanorc
 	sudo pip install -U setuptools
 	pip install paho-mqtt
