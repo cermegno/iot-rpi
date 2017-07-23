@@ -7,7 +7,7 @@ r = redis.Redis(host='127.0.0.1', port='6379')
 def on_message(client, userdata, message):
     m = str(message.payload.decode("utf-8"))
     print("message received " + m)
-    r.set('myvalue',m)
+    r.set('RPIvalue',m)
 #    print("message topic=",message.topic)
 #    print("message qos=",message.qos)
 #    print("message retain flag=",message.retain)
