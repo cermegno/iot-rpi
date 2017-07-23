@@ -7,6 +7,10 @@ def init():
 
 def loop():
 	while True:
+		#The ADC0832 has two channels
+		#res = ADC0832.getResult()   <-- It reads channel 0 by default. Equivalent to getResult(0)
+		#res = ADC0832.getResult(1)  <-- Use this to read the second channel
+
 		res = ADC0832.getResult() - 80
 		if res < 0:
 			res = 0
