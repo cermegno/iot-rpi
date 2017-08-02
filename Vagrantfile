@@ -30,8 +30,8 @@ Vagrant.configure("2") do |config|
 	sudo pip install -U setuptools
 	pip install paho-mqtt
 	cp /vagrant/get-redis-value.py .
-	cp /vagrant/mqtt_pub.py .
-	cp /vagrant/mqtt_sub.py .
+	cp /vagrant/mqtt-pub.py .
+	cp /vagrant/mqtt-sub.py .
 	cp /vagrant/basic-flask.py .
   SHELL
 end
