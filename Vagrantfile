@@ -28,7 +28,8 @@ Vagrant.configure("2") do |config|
 	yum -y install nano
 	echo "include /usr/share/nano/python.nanorc" > .nanorc
 	sudo pip install -U setuptools
-	pip install paho-mqtt
+	pip install setuptools==19.2
+	pip install paho-mqtt==1.1
 	cp /vagrant/get-redis-value.py .
 	cp /vagrant/mqtt-pub.py .
 	cp /vagrant/mqtt-sub.py .
